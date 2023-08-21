@@ -1,0 +1,90 @@
+body {
+  background-image: url('./assets/window.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  height: 100vh;
+}
+
+.gradient-text {
+  letter-spacing: -2px;
+  font-size: 72px;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+  position: relative;
+}
+
+.gradient-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    #ff54da,
+    #4ca1af
+  ); /* #ffa3a1, #a62efd */
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  backgroundclip: text;
+  color: transparent;
+}
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #eae6e6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0);
+}
+#current-time {
+  color: #000000;
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+  margin-bottom: 5px;
+}
+
+#current-date {
+  color: #000000;
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+  margin-top: 20px;
+}
+
+.windows-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.logo-search-container {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 5px;
+  left: 20px;
+  z-index: 10;
+  gap: 10px;
+}
+
+
+.WindowsStart {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 10px; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}

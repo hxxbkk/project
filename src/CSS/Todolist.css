@@ -1,0 +1,284 @@
+/* form 입력*/
+.form {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  margin: 10px 0;
+}
+.form__input {
+  width: 18rem;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  padding-left: 1.4rem;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #d9d9d9,
+    inset -0.2rem -0.2rem 0.5rem #ffffff;
+  background: none;
+  font-family: inherit;
+  color: var(--greyDark);
+  margin-right: 10px;
+}
+.form__input::placeholder {
+  color: var(--greyLight-3);
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0.3rem 0.3rem 0.6rem #d9d9d9, -0.2rem -0.2rem 0.5rem #ffffff;
+}
+
+/* App1 꾸미기 */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox-label {
+  margin-left: 8px;
+}
+
+.checked {
+  color: #bbb7b7;
+  /* text-decoration: line-through; */
+  position: relative;
+}
+
+/* 추가 버튼 */
+.custom-btn {
+  width: 100px;
+  height: 60px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  margin-left: 10px;
+  margin-top: -10px;
+}
+.btn-6 {
+  background: rgb(252, 178, 94); /*rgb(247, 150, 192)*/
+  background: radial-gradient(
+    circle,
+    rgba(252, 178, 94, 1) 0%,
+    /*rgba(247, 150, 192, 1)*/ rgb(229, 242, 143) 100%
+      /*rgba(118, 174, 241, 1)*/
+  );
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: '';
+  height: 0%;
+  width: 1px;
+  box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-6:hover {
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: '';
+  box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 0.5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0.5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+}
+.btn-6 span:hover:after {
+  width: 100%;
+}
+
+.btn-6 span {
+  position: relative;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  height: 100%;
+}
+
+/* 삭제 */
+.delete-icon {
+  display: block;
+  margin: 0 auto;
+  width: 28px;
+  height: 28px;
+}
+
+/* 수정 */
+.edit-icon {
+  display: block;
+  margin: 0 auto;
+  width: 28px;
+  height: 28px;
+}
+
+/* 취소 */
+.cancle-icon {
+  display: block;
+  margin: 0 auto;
+  width: 28px;
+  height: 28px;
+}
+
+/* 수정완료 */
+.modification-icon {
+  display: block;
+  margin: 0 auto;
+  width: 28px;
+  height: 28px;
+}
+
+.input-line {
+  display: line;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  font-size: 24px;
+}
+
+.todo-text {
+  font-size: 24px;
+  margin: 10px 0;
+}
+.todo-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-bottom: 1px solid;
+  border-color: inherit;
+  opacity: 0;
+}
+.checked .todo-text::after {
+  opacity: 1;
+}
+
+/* 체크박스 */
+.custom-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.custom-checkbox + .checkbox-label::before {
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 2px solid #b6b5b5;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked + .checkbox-label::before {
+  content: '🐾';
+  background-color: #fff;
+  border: 2px solid #b6b5b5;
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+}
+
+.todo-text {
+  margin-left: 4px;
+}
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  margin-left: -20px;
+}
+.checkbox-label .todo-text {
+  position: relative;
+  top: 1px;
+}
+
+.edit-button {
+  border: none;
+  background-color: #f9f9f9;
+}
+
+.delete-button {
+  border: none;
+  background-color: #f9f9f9;
+}
+
+.cancle-button {
+  border: none;
+  background-color: #f9f9f9;
+}
+
+.modification-button {
+  border: none;
+  background-color: #f9f9f9;
+}
